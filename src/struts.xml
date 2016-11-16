@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+      "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+      "http://struts.apache.org/dtds/struts-2.0.dtd">
+  <struts>
+	<!-- 网页页面 -->
+      <package name="webpage" namespace=""
+          extends="struts-default">
+   <!-- 会员模块 -->
+   		<!-- 登录 -->
+          <action name="memberLogin" class="MemberAction" method="memberLogin">       	
+          </action>
+          <action name="showMemberMain" class="MemberAction" method="showMemberMain">
+          	<result name="success">/gentelella/memberMain.jsp</result>
+          	<result name="fail">/gentelella/memberLogin.jsp</result>         	
+          </action>            
+         <!-- 注册 -->   
+           <action name="memberRegister" class="MemberAction" method="memberRegister">       	
+          </action>
+          <!-- 产品 -->      
+          <action name="showMemberCollection" class="MemberAction" method="showMemberCollection">
+          	<result name="success">/gentelella/memberCollect.jsp</result>
+          	<result name="fail">/gentelella/memberLogin.jsp</result>         	
+          </action>
+           <action name="addToCart" class="MemberAction" method="addToCart">       	
+           </action>     
+           <action name="addToCollection" class="MemberAction" method="addToCollection">       	
+           </action>    
+           <action name="showProductDetail" class="MemberAction" method="showProductDetail"> 
+	      	<result name="success">/gentelella/memberGoods.jsp</result>
+          	<result name="fail">/gentelella/memberLogin.jsp</result>                    	
+           </action>          
+           <action name="productDetail" class="MemberAction" method="productDetail">  
+           </action>                 
+            <action name="showCart" class="MemberAction" method="showCart"> 
+	      	<result name="success">/gentelella/memberCart.jsp</result>
+          	<result name="fail">/gentelella/memberLogin.jsp</result>                    	
+           </action>  
+           <action name="cartDelete" class="MemberAction" method="cartDelete">  
+           </action>                                                                     
+            <action name="orderSubmit" class="MemberAction" method="orderSubmit">  
+           </action>              
+		<!-- 会员 -->
+		
+         <action name="memberConsumeRecord" class="MemberAction" method="memberConsumeRecord"> 
+	      	<result name="success">/gentelella/memberConsumeRecord.jsp</result>
+          	<result name="fail">/gentelella/memberLogin.jsp</result>                    	
+           </action>               
+            <action name="consumeRecordDetail" class="MemberAction" method="consumeRecordDetail">  
+           </action>    
+            <action name="showConsumeRecordDetail" class="MemberAction" method="showConsumeRecordDetail"> 
+	      	<result name="success">/gentelella/memberConsumeDetail.jsp</result>
+          	<result name="fail">/gentelella/memberLogin.jsp</result>                    	
+           </action> 
+             <action name="showConsumeRegisterInfo" class="MemberAction" method="showConsumeRegisterInfo"> 
+	      	<result name="success">/gentelella/memberRegisterInfo.jsp</result>
+          	<result name="fail">/gentelella/memberLogin.jsp</result>                    	
+           </action>    
+            <action name="showCardInfo" class="MemberAction" method="showCardInfo"> 
+	      	<result name="success">/gentelella/memberCardInfo.jsp</result>
+          	<result name="fail">/gentelella/memberLogin.jsp</result>                    	
+           </action>
+            <action name="memberPay" class="MemberAction" method="memberPay">  
+           </action> 
+            <action name="showMemberPay" class="MemberAction" method="showMemberPay">  
+ 	      	<result name="success">/gentelella/memberPay.jsp</result>
+          	<result name="fail">/gentelella/memberLogin.jsp</result>            
+           </action>  
+            <action name="showMemberCardActive" class="MemberAction" method="showMemberCardActive">  
+ 	      	<result name="success">/gentelella/memberCardActive.jsp</result>
+          	<result name="fail">/gentelella/memberLogin.jsp</result>            
+           </action>              
+           
+            <action name="memberPoints" class="MemberAction" method="memberPoints">  
+           </action>                         
+            <action name="showMemberPoints" class="MemberAction" method="showMemberPoints">  
+ 	      	<result name="success">/gentelella/memberPoints.jsp</result>
+          	<result name="fail">/gentelella/memberLogin.jsp</result>            
+           </action> 
+             <action name="showMemberRecharge" class="MemberAction" method="showMemberRecharge">  
+ 	      	<result name="success">/gentelella/memberRecharge.jsp</result>
+          	<result name="fail">/gentelella/memberLogin.jsp</result>            
+           </action>
+              <action name="showMemberInfo" class="MemberAction" method="showMemberInfo">  
+ 	      	<result name="success">/gentelella/memberInfo.jsp</result>
+          	<result name="fail">/gentelella/memberLogin.jsp</result>            
+           </action> 
+              <action name="showMemberPassword" class="MemberAction" method="showMemberInfo">  
+ 	      	<result name="success">/gentelella/memberChangePassword.jsp</result>
+          	<result name="fail">/gentelella/memberLogin.jsp</result>            
+           </action>            
+             <action name="updateMemberInfo" class="MemberAction" method="updateMemberInfo">  
+           </action>  
+           <action name="updateMemberPassword" class="MemberAction" method="updateMemberPassword">  
+           </action>              
+               <action name="destroyMemberInfo" class="MemberAction" method="destroyMemberInfo">  
+ 	      	<result name="success">/gentelella/memberLogin.jsp</result>
+          	<result name="fail">/gentelella/memberLogin.jsp</result>            
+           </action>                                                                                           
+   <!-- 总经理模块 -->
+          <action name="managerLogin" class="ManagerAction" method="managerLogin">
+          	<result name="success">/gentelella/managerMain.jsp</result>
+          	<result name="fail">/adminLogin.jsp</result>         	
+          </action> 
+          <action name="findSchedule" class="ManagerAction" method="findSchedule">
+          	<result name="success">/gentelella/managerSchedule.jsp</result>
+          	<result name="fail">/adminLogin.jsp</result>         	
+          </action>
+          <action name="managerScheduleDetail" class="ManagerAction" method="managerScheduleDetail">       	
+          </action> 
+          <action name="managerShowDetail" class="ManagerAction" method="managerShowDetail">
+          	<result name="success">/gentelella/ManagerScheduleDetail.jsp</result>
+          	<result name="fail">/adminLogin.jsp</result>         	
+          </action> 
+           <action name="denySchedule" class="ManagerAction" method="denySchedule">       	
+          </action>  
+            <action name="passSchedule" class="ManagerAction" method="passSchedule">       	
+          </action>                                               
+   <!-- 服务员模块 -->
+           <action name="staffLogin" class="StaffAction" method="staffLogin">
+           	<result name="总店">/gentelella/StaffMain.jsp</result>
+          	<result name="分店">/gentelella/StaffCash.jsp</result>        	
+           </action> 
+            <action name="staffChoose" class="StaffAction" method="staffChoose">
+          	<result name="总店">/gentelella/ChooseStore.jsp</result>
+          	<result name="分店">/gentelella/StaffCash.jsp</result>         	
+          </action>          
+            <action name="newConsume" class="StaffAction" method="newConsume">    	
+          </action>  
+          <action name="newDaySchedule" class="StaffAction" method="newDaySchedule">    	
+           </action>                       
+          <action name="refreshSchedule" class="StaffAction" method="refreshSchedule">  
+         	<result name="success">/gentelella/StaffMain.jsp</result>
+          	<result name="fail">/gentelella/login.jsp</result>     	
+           </action>
+            <action name="StaffSchedule" class="StaffAction" method="StaffSchedule">  
+
+           </action> 
+          <action name="ShowStaffSchedule" class="StaffAction" method="ShowStaffSchedule">  
+         	<result name="success">/gentelella/StaffMain.jsp</result>
+          	<result name="fail">/gentelella/login.jsp</result>     	
+           </action>     
+           <action name="searchDetail" class="StaffAction" method="searchDetail">   	
+           </action>
+            <action name="deleteDetail" class="StaffAction" method="deleteDetail">   	
+           </action>             
+           <action name="showDetail" class="StaffAction" method="showDetail">  
+         	<result name="success">/gentelella/ScheduleDetail.jsp</result>
+          	<result name="fail">/gentelella/login.jsp</result>     	
+           </action>     
+            <action name="weekSubmited" class="StaffAction" method="weekSubmited">  
+          	<result name="success">/gentelella/ChooseStore.jsp</result>
+          	<result name="fail">/gentelella/login.jsp</result>     	
+           </action> 
+            <action name="showStoreRecord" class="StaffAction" method="showStoreRecord">  
+          	<result name="success">/gentelella/StaffRecord.jsp</result>
+          	<result name="fail">/gentelella/login.jsp</result>     	
+           </action>   
+            <action name="cardDetail" class="StaffAction" method="cardDetail">  
+           </action>                     
+            <action name="showCardDetail" class="StaffAction" method="showCardDetail">  
+          	<result name="success">/gentelella/StaffCardDetail.jsp</result>
+          	<result name="fail">/gentelella/login.jsp</result>     	
+           </action>   
+            <action name="newCardConsume" class="StaffAction" method="newCardConsume">  
+           </action>  
+            <action name="showStaffCard" class="StaffAction" method="showStaffCard">  
+          	<result name="success">/gentelella/StaffCard.jsp</result>
+          	<result name="fail">/gentelella/login.jsp</result>     	
+           </action>     
+             <action name="recordDetail" class="StaffAction" method="recordDetail">  
+           </action> 
+            <action name="showRecordDetail" class="StaffAction" method="showRecordDetail">  
+          	<result name="success">/gentelella/StaffRecordDetail.jsp</result>
+          	<result name="fail">/gentelella/login.jsp</result>     	
+           </action> 
+           <action name="showScheduleState" class="StaffAction" method="showScheduleState">  
+          	<result name="success">/gentelella/StaffMainSchedule.jsp</result>
+          	<result name="fail">/gentelella/login.jsp</result>     	
+           </action> 
+              <action name="managerTest" class="ManagerAction" method="test">  
+           </action>                                                                                                                                     
+   <!-- 管理员模块 -->
+          <action name="adminLogin" class="AdminAction" method="adminLogin">
+          	<result name="success">/gentelella/adminMain.jsp</result>
+          	<result name="fail">/adminLogin.jsp</result>         	
+          </action>
+          <!-- 店员信息模块 -->
+          <action name="showWaiterInfo" class="AdminAction" method="showWaiterInfo">
+          	<result name="success">/gentelella/adminWaiter.jsp</result>
+          	<result name="fail">/adminLogin.jsp</result>         	
+          </action>    
+         <action name="showAddWaiter" class="AdminAction" method="showAddWaiter">
+          	<result name="success">/gentelella/WaiterAdd.jsp</result>
+          	<result name="fail">/adminLogin.jsp</result>         	
+          </action> 
+          <action name="addWaiterInfo" class="AdminAction" method="addWaiterInfo">
+          </action>            
+           <action name="delWaiterInfo" class="AdminAction" method="delWaiterInfo">	
+          </action> 
+          <action name="showWaiterUpd" class="AdminAction" method="showWaiterUpd">
+          <result name="success">/gentelella/WaiterUpdate.jsp</result>	
+          </action>          
+          <action name="WaiterUpdate" class="AdminAction" method="WaiterUpdate">
+          <result name="success">/gentelella/WaiterUpdate.jsp</result>	
+          </action>  
+          <action name="updateWaiterInfo" class="AdminAction" method="updateWaiterInfo">
+          <result name="success">/gentelella/WaiterUpdate.jsp</result>	
+          </action>       
+                                    
+          <!-- 店面信息模块 -->
+           <action name="showStoreInfo" class="AdminAction" method="showStoreInfo">
+          	<result name="success">/gentelella/adminStore.jsp</result>
+          	<result name="fail">/adminLogin.jsp</result>         	
+          </action>     
+           <action name="delStoreInfo" class="AdminAction" method="delStoreInfo">
+          	<result name="success">/gentelella/adminStore.jsp</result>
+          	<result name="fail">/adminLogin.jsp</result>         	
+          </action>      
+            <action name="addStoreInfo" class="AdminAction" method="addStoreInfo">
+          	<result name="success">/gentelella/adminStore.jsp</result>
+          	<result name="fail">/adminLogin.jsp</result>         	
+          </action>  
+          <action name="StoreAdd" class="AdminAction" method="StoreAdd">
+          	<result name="success">/gentelella/StoreAdd.jsp</result>
+          	<result name="fail">/adminLogin.jsp</result>         	
+          </action>    
+          <action name="chooseUpdateInfo" class="AdminAction" method="chooseUpdateInfo">
+          	<result name="success">/gentelella/StoreUpdate.jsp</result>
+          	<result name="fail">/adminLogin.jsp</result>         	
+          </action>       
+          <action name="StoreUpdate" class="AdminAction" method="StoreUpdate">
+          	<result name="success">/gentelella/StoreUpdate.jsp</result>
+          	<result name="fail">/adminLogin.jsp</result>         	
+          </action>   
+           <action name="updateStoreInfo" class="AdminAction" method="updateStoreInfo">
+          	<result name="success">/gentelella/adminStore.jsp</result>
+          	<result name="fail">/adminLogin.jsp</result>         	
+          </action>         
+                                                               
+      </package>
+      <!-- ajax数据 -->
+      <package name="json" namespace="/JSON" extends="struts-default, json-default">
+	      <action name="getjson" class="TestAction" method="jsonGet">
+				<result type="json">
+					<param name="root">jsonResult</param>
+				</result>
+			</action>
+			<action name="getlist" class="TestAction" method="jsonListGet">
+				<result type="json">
+					<param name="root">jsonList</param>
+				</result>
+			</action>
+      </package>
+      
+  </struts>
